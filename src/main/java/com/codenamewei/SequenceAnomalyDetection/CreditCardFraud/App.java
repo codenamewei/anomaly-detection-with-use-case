@@ -1,9 +1,12 @@
 package com.codenamewei.CreditCardFraud;
 
 import org.datavec.api.records.reader.RecordReader;
+import org.datavec.api.records.reader.SequenceRecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
+import org.datavec.api.records.reader.impl.csv.CSVSequenceRecordReader;
 import org.datavec.api.split.FileSplit;
 import org.deeplearning4j.datasets.datavec.RecordReaderDataSetIterator;
+import org.deeplearning4j.datasets.datavec.SequenceRecordReaderDataSetIterator;
 import org.deeplearning4j.nn.conf.MultiLayerConfiguration;
 import org.deeplearning4j.nn.conf.NeuralNetConfiguration;
 import org.deeplearning4j.nn.conf.layers.LSTM;
@@ -28,17 +31,24 @@ public class App
 {
     public static void main(String[] args) throws Exception
     {
-        File inputFile = new ClassPathResource("CreditCardFraud/creditcardfraud_clean.csv").getFile();
+        String dataPath = "C:\\Users\\chiaw\\Documents\\data\\CreditCardFraud\\creditcardfraud_clean.csv";
+        File inputFile = new File(dataPath);
 
 
-        RecordReader reader = new CSVRecordReader();
+        SequenceRecordReader reader = new CSVSequenceRecordReader();
         reader.initialize(new FileSplit(inputFile));
 
         int totalDataSize = 284807;
         int labelIndex = 29;
         int possibleLabels = 2;
 
-        DataSetIterator dataIter = new RecordReaderDataSetIterator(reader, totalDataSize, labelIndex, possibleLabels);
+        DataSetIterator dataIter = new SequenceRecordReaderDataSetIterator(reader, totalDataSize, possibleLabels, labelIndex);
+
+        DataSet data1 = dataIter.next();
+        int c = 0;
+        /*
+
+
 
         DataSet wholeDataSet = dataIter.next();
 
@@ -73,7 +83,7 @@ public class App
         model.setListeners(new ScoreIterationListener(10));
 
         //model.fit(trainData, trainData); //how to trainData
-
+        */
 
 
         //WORKSPACE
