@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53369e1-7b69-404b-8a66-f2781c6a2079" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/MNISTAnomalyDetection/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anomaly-detection-dl4j.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Cleaning.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codenamewei/SequenceAnomalyDetection/HelloWorld/AnomalyDataSetReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codenamewei/SequenceAnomalyDetection/HelloWorld/AnomalyDataSetReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codenamewei/SequenceAnomalyDetection/HelloWorld/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codenamewei/SequenceAnomalyDetection/HelloWorld/App.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,10 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/HelloWorld/App.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="648">
+              <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="98" selection-end-column="98" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,37 +33,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/MNISTAnomalyDetection/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/1.0.0-beta4/nd4j-api-1.0.0-beta4-sources.jar!/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-datavec-iterators/1.0.0-beta4/deeplearning4j-datavec-iterators-1.0.0-beta4.jar!/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="61" column="162" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="162" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/1.0.0-beta4/datavec-api-1.0.0-beta4.jar!/org/datavec/api/records/reader/SequenceRecordReader.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="1107">
+              <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,6 +60,17 @@
       <find>lOGGER</find>
       <find>nextInt</find>
       <find>iter</find>
+      <find>DataSet</find>
+      <find>output</find>
+      <find>score</find>
+      <find>ArrayList</find>
+      <find>new ArrayList</find>
+      <find>get;e</find>
+      <find>Pair</find>
+      <find>newIm</find>
+      <find>D</find>
+      <find>dataIter</find>
+      <find>[1]</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -95,28 +79,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/codenamewei/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/HelloWorld/AnomalyDataSetIterator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/HelloWorld/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/HelloWorld/AnomalyDataSetReader.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/MNISTAnomalyDetection/App.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1860" />
-    <option name="height" value="1100" />
+    <option name="x" value="2057" />
+    <option name="y" value="-12" />
+    <option name="width" value="877" />
+    <option name="height" value="864" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,15 +133,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SequenceAnomalyDetection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="anomaly-detection-dl4j" type="b2602c69:ProjectViewProjectNode" />
-              <item name="anomaly-detection-dl4j" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SequenceAnomalyDetection" type="462c0819:PsiDirectoryNode" />
               <item name="CreditCardFraud" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -165,8 +141,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SequenceAnomalyDetection" type="462c0819:PsiDirectoryNode" />
-              <item name="CreditCardFraud" type="462c0819:PsiDirectoryNode" />
               <item name="DataPreprocessing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -175,8 +149,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SequenceAnomalyDetection" type="462c0819:PsiDirectoryNode" />
+              <item name=".ipynb_checkpoints" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anomaly-detection-dl4j" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anomaly-detection-dl4j" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="HelloWorld" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anomaly-detection-dl4j" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anomaly-detection-dl4j" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="MNISTAnomalyDetection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="anomaly-detection-dl4j" type="b2602c69:ProjectViewProjectNode" />
@@ -196,16 +185,18 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562467482688" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562590855818" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dl4j-modelling/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaPro/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -219,13 +210,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App (1)">
+  <component name="RunManager" selected="Application.App (3)">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codenamewei.CreditCardFraud.App" />
       <module name="anomaly-detection-dl4j" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.codenamewei.CreditCardFraud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.CreditCardFraud.App" />
+      <module name="anomaly-detection-dl4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.CreditCardFraud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.MNISTAnomalyDetection.App" />
+      <module name="anomaly-detection-dl4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.MNISTAnomalyDetection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -402,6 +419,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App (3)" />
+        <item itemvalue="Application.App (2)" />
         <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.App" />
       </list>
@@ -430,9 +449,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1488" height="878" extended-state="6" />
+    <frame x="1912" y="-8" width="1096" height="1896" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27941176" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.5202703" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -440,16 +460,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.541555" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43297586" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295519" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5201361" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43278503" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32841823" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32841823" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32841748" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32841748" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -459,6 +479,13 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="temp" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../dl4j-examples/pom.xml">
@@ -546,20 +573,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/1.0.0-beta4/datavec-api-1.0.0-beta4.jar!/org/datavec/api/records/reader/SequenceRecordReader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        <state relative-caret-position="108">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TrainingLabs/dl4j-labs/src/main/java/global/skymind/solution/recurrent/physionet/PhysionetMultivariateTimeSeriesClassification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1512" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/HelloWorld/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="432">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -570,24 +610,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-datavec-iterators/1.0.0-beta4/deeplearning4j-datavec-iterators-1.0.0-beta4.jar!/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/1.0.0-beta4/nd4j-api-1.0.0-beta4-sources.jar!/org/nd4j/linalg/dataset/api/DataSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="61" column="162" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="162" />
+        <state relative-caret-position="2394">
+          <caret line="193" column="13" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/1.0.0-beta4/datavec-api-1.0.0-beta4.jar!/org/datavec/api/records/reader/SequenceRecordReader.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-datasets/1.0.0-beta4/deeplearning4j-datasets-1.0.0-beta4.jar!/org/deeplearning4j/datasets/iterator/impl/MnistDataSetIterator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="198">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/1.0.0-beta4/deeplearning4j-nn-1.0.0-beta4-sources.jar!/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="2486" column="38" selection-start-line="2486" selection-start-column="38" selection-end-line="2486" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../dl4j-examples/dl4j-examples/src/main/java/org/deeplearning4j/examples/feedforward/anomalydetection/MNISTAnomalyExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="82" column="52" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="579" selection-start-line="579" selection-end-line="579" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-utility-iterators/1.0.0-beta4/deeplearning4j-utility-iterators-1.0.0-beta4.jar!/org/deeplearning4j/datasets/iterator/AsyncDataSetIterator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="326" selection-start-line="326" selection-end-line="326" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-datavec-iterators/1.0.0-beta4/deeplearning4j-datavec-iterators-1.0.0-beta4.jar!/org/deeplearning4j/datasets/datavec/SequenceRecordReaderDataSetIterator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="260" selection-start-line="260" selection-end-line="260" />
+          <folding>
+            <element signature="e#11666#11667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/1.0.0-beta4/datavec-api-1.0.0-beta4-sources.jar!/org/datavec/api/writable/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="610" selection-start-line="610" selection-end-line="610" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-datavec-iterators/1.0.0-beta4/deeplearning4j-datavec-iterators-1.0.0-beta4.jar!/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="682" selection-start-line="682" selection-end-line="682" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        <state relative-caret-position="648">
+          <caret line="91" column="12" selection-start-line="91" selection-start-column="12" selection-end-line="98" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/MNISTAnomalyDetection/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -620,6 +742,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Python 3.7 interpreter library</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -631,6 +754,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -666,6 +790,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
