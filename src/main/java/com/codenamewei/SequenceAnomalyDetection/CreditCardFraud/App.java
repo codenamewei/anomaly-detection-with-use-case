@@ -17,7 +17,6 @@ import org.deeplearning4j.nn.conf.layers.LSTM;
 import org.deeplearning4j.nn.conf.layers.RnnOutputLayer;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.nn.weights.WeightInit;
-import org.deeplearning4j.optimize.listeners.ScoreIterationListener;
 import org.deeplearning4j.ui.api.UIServer;
 import org.deeplearning4j.ui.stats.StatsListener;
 import org.deeplearning4j.ui.storage.InMemoryStatsStorage;
@@ -26,23 +25,41 @@ import org.nd4j.linalg.activations.Activation;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.dataset.DataSet;
 import org.nd4j.linalg.dataset.api.iterator.DataSetIterator;
+import org.nd4j.linalg.factory.Nd4j;
 import org.nd4j.linalg.learning.config.Adam;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 
 import java.io.File;
+import java.io.FileWriter;
+
 /**
  * Data get from https://www.kaggle.com/mlg-ulb/creditcardfraud
  */
 public class App
 {
-    final static int miniBatchSize = 100;
-    final static int numLabelClasses = 2;
+
+    static final File baseDir = new File("C:\\Users\\chiaw\\Documents\\data\\CreditCardFraud");
+    static final int numLabelClasses = 2;
 
     public static void main(String[] args) throws Exception
     {
-        File baseDir = new File("C:\\Users\\chiaw\\Documents\\data\\CreditCardFraud");
+        File modelSavePath = new File(baseDir, "output\\ccFraud.zip");
 
-        File modelSavePath = new File(baseDir, "\\ccFraud.zip");
+        File featuresDir = new File(baseDir, "data\\features");
+        File labelsDir= new File(baseDir, "data\\labels");
+
+        //load training data
+        int trainMinIndex = 0;
+        int trainMaxIndex = 40000;
+
+        int validMinIndex = 40001;
+        int validMaxIndex = 45561;
+
+        int testMinIndex = -1;
+        int testMaxIndex = -1;
+
+        int miniBatchSize = 100;
+
 
         MultiLayerNetwork model = null;
 
@@ -53,16 +70,10 @@ public class App
         }
         else
         {
-            File trainfeaturesDir = new File(baseDir, "trainfeatures");
-            File trainlabelsDir= new File(baseDir, "trainlabels");
 
-            //load training data
-            int maxIndex = 44000;
-
-            Pair<SequenceRecordReader, SequenceRecordReader> rrTrain = getCreditCardDataReader(trainfeaturesDir, trainlabelsDir, 0, maxIndex);
+            Pair<SequenceRecordReader, SequenceRecordReader> rrTrain = getCreditCardDataReader(featuresDir, labelsDir, trainMinIndex, trainMaxIndex);
 
             DataSetIterator dataIter = new SequenceRecordReaderDataSetIterator(rrTrain.getLeft(), rrTrain.getRight(), miniBatchSize, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
-
 
             /*
             DataSet Dimension
@@ -116,18 +127,11 @@ public class App
             model.save(modelSavePath, true);
         }
 
-        evaluateData(model, baseDir);
+        evaluateData(model, featuresDir, labelsDir, validMinIndex, validMaxIndex);
 
 
         System.out.println("Program end...");
 
-        //WORKSPACE
-        //CUDNN
-        //Manually destroying ADSI workspace
-        //model.setListeners(Collections.singletonList(new ScoreIterationListener(10)));
-        //roc curve
-
-        //confusion matrix
     }
 
     public static Pair<SequenceRecordReader, SequenceRecordReader> getCreditCardDataReader(File featureDir, File labelDir, int minIndex, int maxIndex) throws Exception
@@ -145,38 +149,56 @@ public class App
         return new ImmutablePair<>(features, labels);
     }
 
-    public static void evaluateData(MultiLayerNetwork model, File baseDir) throws Exception
+    public static void evaluateData(MultiLayerNetwork model, File featureDir, File labelDir, int validMinIndex, int validMaxIndex) throws Exception
     {
-        File validfeaturesDir = new File(baseDir, "validfeatures");
-        File validlabelsDir= new File(baseDir, "validlabels");
 
-        int validMinIndex = 44001;
-        int validMaxIndex = 45561;
         int validBatchSize = 1;
 
-        RecordReader rrLabels = new CSVRecordReader();
-        rrLabels.initialize(new FileSplit(validlabelsDir));
-
-        Pair<SequenceRecordReader, SequenceRecordReader> rrValid = getCreditCardDataReader(validfeaturesDir, validlabelsDir, validMinIndex, validMaxIndex);
+        Pair<SequenceRecordReader, SequenceRecordReader> rrValid = getCreditCardDataReader(featureDir, labelDir, validMinIndex, validMaxIndex);
 
         DataSetIterator validDataIter = new SequenceRecordReaderDataSetIterator(rrValid.getLeft(), rrValid.getRight(), validBatchSize, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
 
+
+        //FileCSV save Format TrueLabel, Predicted
+        FileWriter csvWriter = new FileWriter(baseDir + "\\output\\CCFraudResult.csv");
+        csvWriter.append("TrueLabel,Predicted,Score\n");
+
+
         while(validDataIter.hasNext())
         {
-            INDArray features = validDataIter.next().getFeatures();
-
-            //assume one data point per feature
+            DataSet validData = validDataIter.next();
+            INDArray features = validData.getFeatures();
+            INDArray labels = validData.getLabels();
 
             double score = model.score(new DataSet(features, features));
 
-            System.out.print(score + "   ");
+            //assume one data point per feature
+            csvWriter.append(Nd4j.argMax(labels, 1).getScalar(0).toString());
+            csvWriter.append(",");
+            csvWriter.append("0"); //predicted label
+            csvWriter.append(",");
+            csvWriter.append(Double.toString(score));
+            csvWriter.append("\n");
 
-            System.out.println(rrLabels.next());
+            //System.out.print(score + "   ");
         }
+        csvWriter.flush();
+        csvWriter.close();
     }
 
 }
 
+
+//threshold setting and evaluate in python script
+//show result in java (threshold + evaluation result...roc / confusion matrix)
+
+//WORKSPACE
+//CUDNN
+//Manually destroying ADSI workspace
+//model.setListeners(Collections.singletonList(new ScoreIterationListener(10)));
+//roc curve
+
+//confusion matrix
 
 /**
  RecordReader reader = new CSVRecordReader();
