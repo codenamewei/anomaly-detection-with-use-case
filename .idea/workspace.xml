@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53369e1-7b69-404b-8a66-f2781c6a2079" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Result-Visualization.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Cleaning0.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Cleaning0.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Splitting1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Splitting1.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/ResultPostProcessing/Credit-Card-Result-Visualization.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/ResultPostProcessing/Credit-Card-Result-Visualization.ipynb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,11 +25,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-823">
-              <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="430">
+              <caret line="151" column="11" selection-start-line="151" selection-start-column="11" selection-end-line="151" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/1.0.0-beta4/nd4j-api-1.0.0-beta4-sources.jar!/org/nd4j/linalg/api/ndarray/INDArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="931" column="13" selection-start-line="931" selection-start-column="13" selection-end-line="931" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -45,7 +67,6 @@
       <find>next(</find>
       <find>lOGGER</find>
       <find>nextInt</find>
-      <find>iter</find>
       <find>DataSet</find>
       <find>output</find>
       <find>score</find>
@@ -58,6 +79,17 @@
       <find>dataIter</find>
       <find>[1]</find>
       <find>rrLabels</find>
+      <find>getCreditCardDataReader</find>
+      <find>trainlabelsDir</find>
+      <find>fit(</find>
+      <find>iter</find>
+      <find>fit</find>
+      <find>ArrayL</find>
+      <find>model.output</find>
+      <find>baseDir</find>
+      <find>saveTestResult</find>
+      <find>threshold</find>
+      <find>evaluateData</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -77,10 +109,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="314" />
+    <option name="y" value="11" />
+    <option name="width" value="1400" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -89,6 +121,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,6 +153,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SequenceAnomalyDetection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anomaly-detection-dl4j" type="b2602c69:ProjectViewProjectNode" />
+              <item name="anomaly-detection-dl4j" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SequenceAnomalyDetection" type="462c0819:PsiDirectoryNode" />
               <item name="CreditCardFraud" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -128,6 +170,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SequenceAnomalyDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="CreditCardFraud" type="462c0819:PsiDirectoryNode" />
               <item name="DataPreprocessing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -136,23 +180,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name=".ipynb_checkpoints" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="anomaly-detection-dl4j" type="b2602c69:ProjectViewProjectNode" />
-              <item name="anomaly-detection-dl4j" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="HelloWorld" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="anomaly-detection-dl4j" type="b2602c69:ProjectViewProjectNode" />
-              <item name="anomaly-detection-dl4j" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="MNISTAnomalyDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="SequenceAnomalyDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="CreditCardFraud" type="462c0819:PsiDirectoryNode" />
+              <item name="ResultPostProcessing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="anomaly-detection-dl4j" type="b2602c69:ProjectViewProjectNode" />
@@ -171,11 +201,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562629845462" />
     <property name="editor.config.ad.shown" value="true" />
@@ -198,105 +228,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.App (2)">
-    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codenamewei.CreditCardFraud.App" />
-      <module name="anomaly-detection-dl4j" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codenamewei.CreditCardFraud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.CreditCardFraud.App" />
-      <module name="anomaly-detection-dl4j" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.CreditCardFraud.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.MNISTAnomalyDetection.App" />
-      <module name="anomaly-detection-dl4j" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.MNISTAnomalyDetection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.HelloWorld.App" />
-      <module name="anomaly-detection-dl4j" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.HelloWorld.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -404,6 +335,105 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codenamewei.CreditCardFraud.App" />
+      <module name="anomaly-detection-dl4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codenamewei.CreditCardFraud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.CreditCardFraud.App" />
+      <module name="anomaly-detection-dl4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.CreditCardFraud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.MNISTAnomalyDetection.App" />
+      <module name="anomaly-detection-dl4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.MNISTAnomalyDetection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.HelloWorld.App" />
+      <module name="anomaly-detection-dl4j" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.HelloWorld.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App (2)" />
@@ -436,9 +466,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18436293" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23987207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -447,15 +478,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295519" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4463807" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43228602" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.75406283" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3856988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32841748" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32827735" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.20801733" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295519" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32841748" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.8169014" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.6511376" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -581,14 +612,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/1.0.0-beta4/nd4j-api-1.0.0-beta4-sources.jar!/org/nd4j/linalg/dataset/api/iterator/DataSetIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -610,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-nn/1.0.0-beta4/deeplearning4j-nn-1.0.0-beta4-sources.jar!/org/deeplearning4j/nn/multilayer/MultiLayerNetwork.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -634,20 +651,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="579" selection-start-line="579" selection-end-line="579" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/NumberFormatException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/Integer.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/lang/NumberFormatException.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-utility-iterators/1.0.0-beta4/deeplearning4j-utility-iterators-1.0.0-beta4.jar!/org/deeplearning4j/datasets/iterator/AsyncDataSetIterator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
@@ -665,13 +670,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/1.0.0-beta4/datavec-api-1.0.0-beta4-sources.jar!/org/datavec/api/writable/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="610" selection-start-line="610" selection-end-line="610" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/1.0.0-beta4/datavec-api-1.0.0-beta4-sources.jar!/org/datavec/api/writable/Text.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/deeplearning4j/deeplearning4j-datavec-iterators/1.0.0-beta4/deeplearning4j-datavec-iterators-1.0.0-beta4.jar!/org/deeplearning4j/datasets/datavec/RecordReaderMultiDataSetIterator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
@@ -689,10 +688,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/datavec/datavec-api/1.0.0-beta4/datavec-api-1.0.0-beta4.jar!/org/datavec/api/split/NumberedFileInputSplit.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/nd4j/nd4j-api/1.0.0-beta4/nd4j-api-1.0.0-beta4-sources.jar!/org/nd4j/linalg/api/ndarray/INDArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="931" column="13" selection-start-line="931" selection-start-column="13" selection-end-line="931" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-823">
-          <caret line="51" column="30" lean-forward="true" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        <state relative-caret-position="430">
+          <caret line="151" column="11" selection-start-line="151" selection-start-column="11" selection-end-line="151" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

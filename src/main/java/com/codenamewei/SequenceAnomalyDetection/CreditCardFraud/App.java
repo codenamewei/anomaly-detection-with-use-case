@@ -2,11 +2,8 @@ package com.codenamewei.SequenceAnomalyDetection.CreditCardFraud;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
-import org.datavec.api.records.reader.RecordReader;
 import org.datavec.api.records.reader.SequenceRecordReader;
-import org.datavec.api.records.reader.impl.csv.CSVRecordReader;
 import org.datavec.api.records.reader.impl.csv.CSVSequenceRecordReader;
-import org.datavec.api.split.FileSplit;
 import org.datavec.api.split.InputSplit;
 import org.datavec.api.split.NumberedFileInputSplit;
 import org.deeplearning4j.api.storage.StatsStorage;
@@ -31,34 +28,50 @@ import org.nd4j.linalg.lossfunctions.LossFunctions;
 
 import java.io.File;
 import java.io.FileWriter;
-
+import java.util.*;
+import java.util.List;
 /**
+ *
+ * Normal Data: 284315
+ * Fraud Data: 492
+ *
+ *Training Data:
+ *     Normal Data: 255884 (0 - 255883) (inclusive)
+ *Testing Data:
+ *     Total: 28923
+ *     Normal Data: 28431 (255884 - 284314)
+ *     Fraud Data: 492 (284315 - 284806)
+ *
  * Data get from https://www.kaggle.com/mlg-ulb/creditcardfraud
  */
 public class App
 {
 
-    static final File baseDir = new File("C:\\Users\\chiaw\\Documents\\data\\CreditCardFraud");
+    static final File baseDir = new File("D:\\Users\\chiawei\\Documents\\data\\CreditCardFraud\\");
     static final int numLabelClasses = 2;
+
+
+    static final double threshold = 5;
 
     public static void main(String[] args) throws Exception
     {
         File modelSavePath = new File(baseDir, "output\\ccFraud.zip");
 
-        File featuresDir = new File(baseDir, "data\\features");
-        File labelsDir= new File(baseDir, "data\\labels");
+        File trainFeaturesDir = new File(baseDir, "data\\train_data\\features");
+        File trainLabelsDir = new File(baseDir, "data\\train_data\\labels");
+
+        File testFeaturesDir = new File(baseDir, "data\\test_data\\features");
+        File testLabelsDir= new File(baseDir, "data\\test_data\\labels");
 
         //load training data
         int trainMinIndex = 0;
-        int trainMaxIndex = 40000;
+        int trainMaxIndex = 255883;
 
-        int validMinIndex = 40001;
-        int validMaxIndex = 45561;
+        int testMinIndex = 255884;
+        int testMaxIndex = 284806;
 
-        int testMinIndex = -1;
-        int testMaxIndex = -1;
+        int miniBatchSize = 284;
 
-        int miniBatchSize = 100;
 
 
         MultiLayerNetwork model = null;
@@ -71,9 +84,9 @@ public class App
         else
         {
 
-            Pair<SequenceRecordReader, SequenceRecordReader> rrTrain = getCreditCardDataReader(featuresDir, labelsDir, trainMinIndex, trainMaxIndex);
+            Pair<SequenceRecordReader, SequenceRecordReader> rrTrain = getCreditCardDataReader(trainFeaturesDir, trainLabelsDir, trainMinIndex, trainMaxIndex);
 
-            DataSetIterator dataIter = new SequenceRecordReaderDataSetIterator(rrTrain.getLeft(), rrTrain.getRight(), miniBatchSize, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
+            DataSetIterator trainIter = new SequenceRecordReaderDataSetIterator(rrTrain.getLeft(), rrTrain.getRight(), miniBatchSize, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
 
             /*
             DataSet Dimension
@@ -84,7 +97,7 @@ public class App
 
             int SEED = 123;
             int FEATURES_NODES = 29;
-            int HIDDEN_NODES = 8;
+            int HIDDEN_NODES = 16;
 
             MultiLayerConfiguration config = new NeuralNetConfiguration.Builder()
                     .seed(SEED)
@@ -93,9 +106,11 @@ public class App
                     .list()
                     .layer(0, new LSTM.Builder().activation(Activation.TANH).nIn(FEATURES_NODES).nOut(HIDDEN_NODES).build())
 
-                    .layer(1, new LSTM.Builder().activation(Activation.TANH).nIn(HIDDEN_NODES).nOut(HIDDEN_NODES).build())
+                    .layer(1, new LSTM.Builder().activation(Activation.TANH).nIn(HIDDEN_NODES).nOut((int) (HIDDEN_NODES / 2.0)).build())
 
-                    .layer(2, new RnnOutputLayer.Builder()
+                    .layer(2, new LSTM.Builder().activation(Activation.TANH).nIn((int) (HIDDEN_NODES / 2.0)).nOut(HIDDEN_NODES).build())
+
+                    .layer(3, new RnnOutputLayer.Builder()
                             .lossFunction(LossFunctions.LossFunction.MSE)
                             .nIn(HIDDEN_NODES).nOut(FEATURES_NODES).build())
                     .build();
@@ -109,25 +124,32 @@ public class App
             model.init();
             model.setListeners(new StatsListener(statsStorage));//new ScoreIterationListener(10));
 
-            int nEpochs = 5;
-            for( int epoch = 0; epoch < nEpochs; epoch++ )
+            System.out.println("Start Training");
+
+            int nEpochs = 1;
+            for( int i = 0; i < nEpochs; i++ )
             {
-                while(dataIter.hasNext())
+                while(trainIter.hasNext())
                 {
-                    INDArray features = dataIter.next().getFeatures();
+                    INDArray features = trainIter.next().getFeatures();
 
                     model.fit(features, features);
 
                 }
-
-                dataIter.reset();
-                System.out.println("Epoch " + epoch + " complete");
+                trainIter.reset();
+                System.out.println("Epoch " + i + " completed");
             }
 
             model.save(modelSavePath, true);
+
+            //evaluateData(model, trainIter);
         }
 
-        evaluateData(model, featuresDir, labelsDir, validMinIndex, validMaxIndex);
+        Pair<SequenceRecordReader, SequenceRecordReader> rrTest = getCreditCardDataReader(testFeaturesDir, testLabelsDir, testMinIndex, testMaxIndex);
+        DataSetIterator testIter = new SequenceRecordReaderDataSetIterator(rrTest.getLeft(), rrTest.getRight(), 1, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
+
+        saveTestResult(model, testIter);
+        evaluateData(model, testIter);
 
 
         System.out.println("Program end...");
@@ -149,24 +171,21 @@ public class App
         return new ImmutablePair<>(features, labels);
     }
 
-    public static void evaluateData(MultiLayerNetwork model, File featureDir, File labelDir, int validMinIndex, int validMaxIndex) throws Exception
+    public static void saveTestResult(MultiLayerNetwork model, DataSetIterator iter) throws Exception
     {
-
-        int validBatchSize = 1;
-
-        Pair<SequenceRecordReader, SequenceRecordReader> rrValid = getCreditCardDataReader(featureDir, labelDir, validMinIndex, validMaxIndex);
-
-        DataSetIterator validDataIter = new SequenceRecordReaderDataSetIterator(rrValid.getLeft(), rrValid.getRight(), validBatchSize, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
-
+        String resultFile = "CCFraudResult.csv";
+        System.out.println("Saving data as " + resultFile);
 
         //FileCSV save Format TrueLabel, Predicted
-        FileWriter csvWriter = new FileWriter(baseDir + "\\output\\CCFraudResult.csv");
+        FileWriter csvWriter = new FileWriter(baseDir + "\\output\\" + resultFile);
         csvWriter.append("TrueLabel,Predicted,Score\n");
 
 
-        while(validDataIter.hasNext())
+        iter.reset();
+
+        while(iter.hasNext())
         {
-            DataSet validData = validDataIter.next();
+            DataSet validData = iter.next();
             INDArray features = validData.getFeatures();
             INDArray labels = validData.getLabels();
 
@@ -184,7 +203,76 @@ public class App
         }
         csvWriter.flush();
         csvWriter.close();
+
+        System.out.println("Save data done");
+
     }
+
+    public static void evaluateData(MultiLayerNetwork model, DataSetIterator iter) throws Exception
+    {
+
+        int tp = 0; int tn = 0; int fp = 0; int fn = 0;
+
+        List<Pair<Double, Integer>> list0 = new ArrayList<>();
+        List<Pair<Double, Integer>> list1 = new ArrayList<>();
+
+        iter.reset();
+
+        while(iter.hasNext())
+        {
+            DataSet dataset = iter.next();
+            INDArray features = dataset.getFeatures();
+            int realLabel = Nd4j.argMax(dataset.getLabels(), 1).getInt(0);
+
+            double score = model.score(new DataSet(features, features));
+            int predictedLabel;
+
+            if(threshold > score) predictedLabel = 1; else predictedLabel = 0;
+
+
+            if( realLabel == 0) //normal //negative
+            {
+                list0.add(new ImmutablePair<>(score, predictedLabel));
+
+                if(predictedLabel == 1)
+                {
+                    fp += 1;
+                }
+                else
+                {
+                    tn += 1;
+                }
+            }
+            else //realLabel == 1
+            {
+                list1.add(new ImmutablePair<>(score, predictedLabel));
+
+                if(predictedLabel == 1)
+                {
+                    tp += 1;
+                }
+                else
+                {
+                    fn += 1;
+                }
+            }
+        }
+
+        System.out.println("*******************************");
+        System.out.println("True Positive: " + tp);
+        System.out.println("False Positive: " + fp);
+        System.out.println("True Negative: " + tn);
+        System.out.println("False Negative: " + fn);
+        System.out.println("*******************************");
+
+        Map<Integer, List<Pair<Double, Integer>>> listsByLabel = new HashMap<>(); //key =fraud, nonfraud list(score, predicted_label)
+
+        listsByLabel.put(new Integer(0), list0);
+        listsByLabel.put(new Integer(1), list1);
+    }
+
+
+
 
 }
 
