@@ -47,7 +47,7 @@ import java.util.List;
 public class App
 {
 
-    static final File baseDir = new File("D:\\Users\\chiawei\\Documents\\data\\CreditCardFraud\\");
+    static final File baseDir = new File("D:\\Users\\chiawei\\Documents\\data\\CreditCardFraud\\data\\");
     static final int numLabelClasses = 2;
 
 
@@ -57,11 +57,11 @@ public class App
     {
         File modelSavePath = new File(baseDir, "output\\ccFraud.zip");
 
-        File trainFeaturesDir = new File(baseDir, "data\\train_data\\features");
-        File trainLabelsDir = new File(baseDir, "data\\train_data\\labels");
+        File trainFeaturesDir = new File(baseDir, "train_data\\features");
+        File trainLabelsDir = new File(baseDir, "train_data\\labels");
 
-        File testFeaturesDir = new File(baseDir, "data\\test_data\\features");
-        File testLabelsDir= new File(baseDir, "data\\test_data\\labels");
+        File testFeaturesDir = new File(baseDir, "test_data\\features");
+        File testLabelsDir= new File(baseDir, "test_data\\labels");
 
         //load training data
         int trainMinIndex = 0;
@@ -102,15 +102,19 @@ public class App
             MultiLayerConfiguration config = new NeuralNetConfiguration.Builder()
                     .seed(SEED)
                     .weightInit(WeightInit.XAVIER)
-                    .updater(new Adam(0.001))
+                    .updater(new Adam(0.005))
                     .list()
                     .layer(0, new LSTM.Builder().activation(Activation.TANH).nIn(FEATURES_NODES).nOut(HIDDEN_NODES).build())
 
                     .layer(1, new LSTM.Builder().activation(Activation.TANH).nIn(HIDDEN_NODES).nOut((int) (HIDDEN_NODES / 2.0)).build())
 
-                    .layer(2, new LSTM.Builder().activation(Activation.TANH).nIn((int) (HIDDEN_NODES / 2.0)).nOut(HIDDEN_NODES).build())
+                    .layer(2, new LSTM.Builder().activation(Activation.TANH).nIn((int) (HIDDEN_NODES / 2.0)).nOut((int) (HIDDEN_NODES / 4.0)).build())
 
-                    .layer(3, new RnnOutputLayer.Builder()
+                    .layer(3, new LSTM.Builder().activation(Activation.TANH).nIn((int) (HIDDEN_NODES / 4.0)).nOut((int) (HIDDEN_NODES / 2.0)).build())
+
+                    .layer(4, new LSTM.Builder().activation(Activation.TANH).nIn((int) (HIDDEN_NODES / 2.0)).nOut(HIDDEN_NODES).build())
+
+                    .layer(5, new RnnOutputLayer.Builder()
                             .lossFunction(LossFunctions.LossFunction.MSE)
                             .nIn(HIDDEN_NODES).nOut(FEATURES_NODES).build())
                     .build();
@@ -148,7 +152,7 @@ public class App
         Pair<SequenceRecordReader, SequenceRecordReader> rrTest = getCreditCardDataReader(testFeaturesDir, testLabelsDir, testMinIndex, testMaxIndex);
         DataSetIterator testIter = new SequenceRecordReaderDataSetIterator(rrTest.getLeft(), rrTest.getRight(), 1, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
 
-        saveTestResult(model, testIter);
+        //saveTestResult(model, testIter);
         evaluateData(model, testIter);
 
 
@@ -227,7 +231,7 @@ public class App
             double score = model.score(new DataSet(features, features));
             int predictedLabel;
 
-            if(threshold > score) predictedLabel = 1; else predictedLabel = 0;
+            if(threshold < score) predictedLabel = 1; else predictedLabel = 0;
 
 
             if( realLabel == 0) //normal //negative
@@ -258,11 +262,13 @@ public class App
             }
         }
 
+        System.out.println("Ground Truth: TN: 28431 TP: 492");
         System.out.println("*******************************");
-        System.out.println("True Positive: " + tp);
-        System.out.println("False Positive: " + fp);
-        System.out.println("True Negative: " + tn);
+        System.out.print("True Negative: " + tn + " ");
         System.out.println("False Negative: " + fn);
+
+        System.out.print("False Positive: " + fp +  " ");
+        System.out.println("True Positive: " + tp);
         System.out.println("*******************************");
 
         Map<Integer, List<Pair<Double, Integer>>> listsByLabel = new HashMap<>(); //key =fraud, nonfraud list(score, predicted_label)
