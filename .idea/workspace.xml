@@ -2,41 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53369e1-7b69-404b-8a66-f2781c6a2079" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Cleaning0.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Splitting1.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Result-Visualization.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/ResultPostProcessing/Credit-Card-Result-Visualization.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/resources/anomalysequencedata/sensordata_test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/resources/anomalysequencedata/sensordata_train.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/test/java/com/codenamewei/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/metadata/gif/creditcard.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Cleaning_0.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Splitting_1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/resources/CreditCardFraud.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Cleaning0.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Splitting1.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Result-Visualization.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/ResultPostProcessing/Credit-Card-Result-Visualization.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/HelloWorld/AnomalyDataSetIterator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/HelloWorld/AnomalyDataSetReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/HelloWorld/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codenamewei/SequenceAnomalyDetection/MNISTAnomalyDetection/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/anomalysequencedata/sensordata_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/anomalysequencedata/sensordata_train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codenamewei/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/anomalysequencedata/sensordata_test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/anomalysequencedata/sensordata_train.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codenamewei/SequenceAnomalyDetection/HelloWorld/AnomalyDataSetIterator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codenamewei/SequenceAnomalyDetection/HelloWorld/AnomalyDataSetReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/codenamewei/SequenceAnomalyDetection/HelloWorld/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/codenamewei/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-fraud/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Cleaning0.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Splitting1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Result-Visualization.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/resources/anomalysequencedata/sensordata_test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/resources/anomalysequencedata/sensordata_train.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,37 +30,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>scala.</find>
-      <find>next(</find>
-      <find>lOGGER</find>
-      <find>nextInt</find>
-      <find>DataSet</find>
-      <find>output</find>
-      <find>ArrayList</find>
-      <find>new ArrayList</find>
-      <find>get;e</find>
-      <find>Pair</find>
-      <find>newIm</find>
-      <find>D</find>
-      <find>dataIter</find>
-      <find>[1]</find>
-      <find>rrLabels</find>
-      <find>getCreditCardDataReader</find>
-      <find>trainlabelsDir</find>
-      <find>fit(</find>
-      <find>iter</find>
-      <find>fit</find>
-      <find>ArrayL</find>
-      <find>model.output</find>
-      <find>baseDir</find>
-      <find>saveTestResult</find>
-      <find>evaluateData</find>
-      <find>score</find>
-      <find>threshold</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
