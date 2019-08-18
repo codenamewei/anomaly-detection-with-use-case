@@ -3,15 +3,17 @@
 <p align="center">
   <img src="../metadata/gif/creditcard.gif">
 </p>
-
 ## Overview 
+
+This dataset is highly unbalanced, adding complexity to the data modelling.
+
 
 ## File Structure 
 
 ```
 CreditCardFraud 
 │   
-│   App.java    
+│───App.java    
 │
 └───DataPreprocessing
 │   │   Credit-Card-Data-Cleaning_0.ipynb
