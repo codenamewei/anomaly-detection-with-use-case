@@ -31,5 +31,5 @@ CreditCardFraud
 **Credit-Card-Result-Visualization.ipynb:**
 
 ## Data Sources
-Data will retrived from https://www.kaggle.com/mlg-ulb/creditcardfraud.
+Data will retrived from https://www.kaggle.com/mlg-ulb/creditcardfraud.  
 Further processing is done to separate each data point to a file.
