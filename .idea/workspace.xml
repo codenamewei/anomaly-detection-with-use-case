@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53369e1-7b69-404b-8a66-f2781c6a2079" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/credit-card-fraud/PrePostProcessing/DataPreprocessing/Credit-Card-Data-Cleaning_0.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-card-fraud/PrePostProcessing/DataPreprocessing/Credit-Card-Data-Splitting_1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-card-fraud/PrePostProcessing/ResultPostProcessing/Credit-Card-Result-Visualization.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/CreditCardFraud/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/credit-card-fraud/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-fraud/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Cleaning_0.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/DataPreprocessing/Credit-Card-Data-Splitting_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/SequenceAnomalyDetection/CreditCardFraud/ResultPostProcessing/Credit-Card-Result-Visualization.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/resources/CreditCardFraud.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/test/java/com/codenamewei/AppTest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +45,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562629845462" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/credit-card-fraud" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -57,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App (2)">
+  <component name="RunManager" selected="Application.App (5)">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codenamewei.CreditCardFraud.App" />
       <module name="anomaly-detection-dl4j" />
@@ -97,12 +107,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.HelloWorld.App" />
-      <module name="anomaly-detection-dl4j" />
+    <configuration name="App (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codenamewei.SequenceAnomalyDetection.CreditCardFraud.App" />
+      <module name="credit-card-fraud" />
+      <shortenClasspath name="CLASSPATH_FILE" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.HelloWorld.*" />
+          <option name="PATTERN" value="com.codenamewei.SequenceAnomalyDetection.CreditCardFraud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.codenamewei.CreditCardFraud.App" />
+      <module name="credit-card-fraud" />
+      <shortenClasspath name="CLASSPATH_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codenamewei.CreditCardFraud.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -266,10 +291,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App (5)" />
+        <item itemvalue="Application.App (4)" />
         <item itemvalue="Application.App (2)" />
         <item itemvalue="Application.App (3)" />
         <item itemvalue="Application.App (1)" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -286,21 +312,14 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -315,93 +334,5 @@
         <watch expression="temp" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Python 3.7 interpreter library</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>anomaly-detection-dl4j</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>12</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
