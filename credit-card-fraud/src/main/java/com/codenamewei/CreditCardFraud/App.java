@@ -101,6 +101,7 @@ public class App
                 1, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
 
         //Set up network configuration
+        //28 -> 16 -> 8 -> 16 -> 29 (nodes)
         MultiLayerConfiguration config = new NeuralNetConfiguration.Builder()
                 .seed(seed)
                 .weightInit(WeightInit.XAVIER)
@@ -129,7 +130,7 @@ public class App
         // It is worth to take note that the model is only trained with data of non-frauds to learn the general representation of non fraud data.
         System.out.println("Start Training");
 
-        int nEpochs = 1;
+        int nEpochs = 2;
 
         for( int i = 0; i < nEpochs; i++ )
         {
