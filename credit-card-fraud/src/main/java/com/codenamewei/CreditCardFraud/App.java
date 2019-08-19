@@ -81,7 +81,7 @@ public class App
     public static void main(String[] args) throws Exception
     {
         //Unzip the downloaded file from the /resources/CreditCardFraud.zip into designated directory
-        File zipFilePath = new File("C:\\Users\\chiaw\\Downloads\\" +  "CreditCardFraud.zip");
+        File zipFilePath = new File("SET\\TO\\YOUR\\PATH\\" +  "CreditCardFraud.zip");
         File baseDir = unzipFile(zipFilePath);
 
         //Predefined directories in the .zip data file
