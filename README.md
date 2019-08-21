@@ -9,7 +9,7 @@ The goal is to achieve faster inspection to narrow down scenarios different from
 
 ## Use Cases 
 
-Refer to the readme of every use case sub directory for a more through elaboration. 
+Refer to the readme of every use case sub-directory for a more through elaboration. 
 
 1. **Credit Card Fraud**:  
 This example shows the modelling of Credit Card Transaction Data using LSTM Autoencoder.  
