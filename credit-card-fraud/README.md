@@ -19,7 +19,6 @@ This example is model with a fairly large amount of data, closing to 300 thousan
 The data set is highly unbalanced with the ratio of 577 (normal) : 1 (fraud),    
 adding complexity to the data modelling.
 
-
 ## File Structure 
 ```
 credit-card-fraud 
@@ -38,23 +37,26 @@ credit-card-fraud
 **App.java:**
  
 **Credit-Card-Data-Cleaning_0.ipynb:**  
-Remove first row of the data(column names) and first column of the data(Time feature).
+- Remove first row of the data(column names) and first column of the data(Time feature).
  
 **Credit-Card-Data_Splitting_1.ipynb:**  
 - Normalize the total transaction column of the data
 - Split data points into feature and labels and store as .csv.
 
 **Credit-Card-Result-Visualization.ipynb:**
-Visualize the results of the testing data and plot recall-precision curve.  
+- Visualize the results of the testing data and plot recall-precision curve.  
 
 ## Data Sources
 Data is retrieved from https://www.kaggle.com/mlg-ulb/creditcardfraud.  
-Yet this is not the data we used to model with directly.  
+It is of 2 days of transactions data from European cardholders in September 2013. 
+
+Yet this is not the data this example used in modelling directly.
+
 Preprocessing steps below are done to obtain the current CreditCardFraud.zip data for training and testing.    
-If you would just use the data processing to **Training and Testing Data** subsection. 
+If you would just use the data processing, proceed to **Training and Testing Data** subsection. 
 
 (1) Drop the time column (For modelling with LSTM, time feature is not necessary)  
-(2) Drop the row with name of the columns (Time, V1, V2, V3 ...) 
+(2) Drop the row with name of the columns (Time, V1, V2, V3 ...)  
 (3) Normalize the total amount transaction column into the range [-1, 1].   
 (4) Split each data point into feature(.csv) and label(.csv) and place in separate directories according to the label  
 (5) Redistribute the files into training and testing data sets.  
@@ -66,18 +68,18 @@ Data cleansed and proprocessed is further segmented into training and testing da
 which is further elaborated in next section. 
 
 ### Training and Testing Data
-Number of dataset for total dataset:
- *      Non-Fraud Data: 284315
- *      Fraud Data    :   492
+Number of data points for whole dataset:
+- Non-Fraud Data: 284315  
+- Fraud Data    :   492
 
 The dataset is further partitioned into training and testing dataset.
 
 Number of data points for training dataset:
- *     Non-Fraud Data : 255 884 (File Index: [0.csv - 255883.csv])
+- Non-Fraud Data : 255 884 (File Index: [0.csv - 255883.csv])
  
 Number of data points for testing dataset:
- *     Non Fraud Data : 28431 (File Name Index: [255884.csv - 284314.csv])
- *     Fraud Data     : 492 (File Name Index: [284315.csv - 284806.csv0])
+- Non Fraud Data : 28431 (File Name Index: [255884.csv - 284314.csv])
+- Fraud Data     : 492 (File Name Index: [284315.csv - 284806.csv0])
 
 These dataset is then zipped and stored as CreditCardFraud.zip.
 
@@ -114,5 +116,9 @@ CreditCardFraud.zip
 
 ## How to Run
  1. Download CreditCardFraud.zip file from this link https://drive.google.com/file/d/1ye6kjPQzt5VcQUuwLaPsxUqnAli2AoXe/view?usp=sharingv
- 2. In App.java, set File zipFilePath to your path to CreditCardFraud.zip
+ 2. In App.java, set zipFilePath to your machine absolute path to CreditCardFraud.zip  
+    For example  
+    `
+    File zipFilePath = new File("C:\\Users\\johndoe\\Downloads\\" +  "CreditCardFraud.zip");
+    `
  3. Run App.java
