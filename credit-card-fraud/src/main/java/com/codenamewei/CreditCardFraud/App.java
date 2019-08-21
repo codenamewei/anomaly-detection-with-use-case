@@ -61,20 +61,20 @@ import java.io.File;
  */
 public class App
 {
-    static final int trainMinIndex = 0;
-    static final int trainMaxIndex = 255883;
+    static final int TRAIN_MIN_INDEX = 0;
+    static final int TRAIN_MAX_INDEX = 255883;
 
-    static final int testMinIndex = 255884;
-    static final int testMaxIndex = 284806;
+    static final int TEST_MIN_INDEX = 255884;
+    static final int TEST_MAX_INDEX = 284806;
 
-    static final int seed = 123;
-    static final int featureNodes = 29;
-    static final int hiddenNodes = 16;
+    static final int SEED = 123;
+    static final int FEATURE_NODES = 29;
+    static final int HIDDEN_NODES = 16;
 
-    static final int miniBatchSize = 284;
-    static final int numLabelClasses = 2;
+    static final int MINI_BATCH_SIZE = 284;
+    static final int CLASSES = 2;
 
-    static final double thresholdScore= 2.5;
+    static final double THRESHOLD = 2.5;
 
     public static void main(String[] args) throws Exception
     {
@@ -90,30 +90,30 @@ public class App
         File testLabelsDir= new File(baseDir, "\\test_label");
 
         //Load data and split into training and testing data set
-        Pair<SequenceRecordReader, SequenceRecordReader> rrTrain = getCreditCardDataReader(trainFeaturesDir, trainLabelsDir, trainMinIndex, trainMaxIndex);
+        Pair<SequenceRecordReader, SequenceRecordReader> rrTrain = getCreditCardDataReader(trainFeaturesDir, trainLabelsDir, TRAIN_MIN_INDEX, TRAIN_MAX_INDEX);
         DataSetIterator trainIter = new SequenceRecordReaderDataSetIterator(rrTrain.getLeft(), rrTrain.getRight(),
-                miniBatchSize, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
+                MINI_BATCH_SIZE, CLASSES, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
 
-        Pair<SequenceRecordReader, SequenceRecordReader> rrTest = getCreditCardDataReader(testFeaturesDir, testLabelsDir, testMinIndex, testMaxIndex);
+        Pair<SequenceRecordReader, SequenceRecordReader> rrTest = getCreditCardDataReader(testFeaturesDir, testLabelsDir, TEST_MIN_INDEX, TEST_MAX_INDEX);
         DataSetIterator testIter = new SequenceRecordReaderDataSetIterator(rrTest.getLeft(), rrTest.getRight(),
-                1, numLabelClasses, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
+                1, CLASSES, false, SequenceRecordReaderDataSetIterator.AlignmentMode.ALIGN_END);
 
         //Set up network configuration
         //28 -> 16 -> 8 -> 16 -> 29 (nodes)
         MultiLayerConfiguration config = new NeuralNetConfiguration.Builder()
-                .seed(seed)
+                .seed(SEED)
                 .weightInit(WeightInit.XAVIER)
                 .updater(new Adam(0.001))
                 .list()
-                .layer(0, new LSTM.Builder().activation(Activation.TANH).nIn(featureNodes).nOut(hiddenNodes).build())
+                .layer(0, new LSTM.Builder().activation(Activation.TANH).nIn(FEATURE_NODES).nOut(HIDDEN_NODES).build())
 
-                .layer(1, new LSTM.Builder().activation(Activation.TANH).nIn(hiddenNodes).nOut((int) (hiddenNodes / 2.0)).build())
+                .layer(1, new LSTM.Builder().activation(Activation.TANH).nIn(HIDDEN_NODES).nOut((int) (HIDDEN_NODES / 2.0)).build())
 
-                .layer(2, new LSTM.Builder().activation(Activation.TANH).nIn((int) (hiddenNodes / 2.0)).nOut(hiddenNodes).build())
+                .layer(2, new LSTM.Builder().activation(Activation.TANH).nIn((int) (HIDDEN_NODES / 2.0)).nOut(HIDDEN_NODES).build())
 
                 .layer(3, new RnnOutputLayer.Builder()
                         .lossFunction(LossFunctions.LossFunction.MSE)
-                        .nIn(hiddenNodes).nOut(featureNodes).build())
+                        .nIn(HIDDEN_NODES).nOut(FEATURE_NODES).build())
                 .build();
 
         UIServer uiServer = UIServer.getInstance();
@@ -128,7 +128,7 @@ public class App
         // It is worth to take note that the model is only trained with data of non-frauds to learn the general representation of non fraud data.
         System.out.println("Start Training");
 
-        int nEpochs = 2;
+        int nEpochs = 1;
 
         for( int i = 0; i < nEpochs; i++ )
         {
@@ -233,7 +233,7 @@ public class App
 
             int predictedLabel;
 
-            if(thresholdScore > score) predictedLabel = 0; else predictedLabel = 1;
+            if(THRESHOLD > score) predictedLabel = 0; else predictedLabel = 1;
 
             if( realLabel == 1)
             {
