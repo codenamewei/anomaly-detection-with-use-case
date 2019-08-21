@@ -19,6 +19,15 @@ This example is model with a fairly large amount of data, closing to 300 thousan
 The data set is highly unbalanced with the ratio of 577 (normal) : 1 (fraud),    
 adding complexity to the data modelling.
 
+## How to Run
+ 1. Download CreditCardFraud.zip file from this link https://drive.google.com/file/d/1ye6kjPQzt5VcQUuwLaPsxUqnAli2AoXe/view?usp=sharingv
+ 2. In App.java, set zipFilePath to your machine absolute path to CreditCardFraud.zip  
+    For example  
+    `
+    File zipFilePath = new File("C:\\Users\\johndoe\\Downloads\\" +  "CreditCardFraud.zip");
+    `
+ 3. Run App.java
+
 ## File Structure 
 ```
 credit-card-fraud 
@@ -75,11 +84,14 @@ Number of data points for whole dataset:
 The dataset is further partitioned into training and testing dataset.
 
 Number of data points for training dataset:
-- Non-Fraud Data : 255 884 (File Index: [0.csv - 255883.csv])
+- Non-Fraud Data : 255 884   
+  File Index: [0.csv - 255883.csv]
  
 Number of data points for testing dataset:
-- Non Fraud Data : 28431 (File Name Index: [255884.csv - 284314.csv])
-- Fraud Data     : 492 (File Name Index: [284315.csv - 284806.csv0])
+- Non Fraud Data : 28431  
+  File Name Index: [255884.csv - 284314.csv]
+- Fraud Data     : 492  
+  File Name Index: [284315.csv - 284806.csv]
 
 These dataset is then zipped and stored as CreditCardFraud.zip.
 
@@ -113,12 +125,3 @@ CreditCardFraud.zip
 │   │   ...
 │   │   8489.csv
 ```
-
-## How to Run
- 1. Download CreditCardFraud.zip file from this link https://drive.google.com/file/d/1ye6kjPQzt5VcQUuwLaPsxUqnAli2AoXe/view?usp=sharingv
- 2. In App.java, set zipFilePath to your machine absolute path to CreditCardFraud.zip  
-    For example  
-    `
-    File zipFilePath = new File("C:\\Users\\johndoe\\Downloads\\" +  "CreditCardFraud.zip");
-    `
- 3. Run App.java
