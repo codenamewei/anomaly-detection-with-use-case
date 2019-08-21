@@ -39,25 +39,23 @@ import java.io.File;
  * This is accomplished in this example using a simple LSTM Autoencoder.
  * Reconstruction error should be low for stereotypical example, whereas outliers should have high reconstruction error.
  *
- * The dataset was retrieved from https://www.kaggle.com/mlg-ulb/creditcardfraud,
- * processed and dissected into smaller dataset as preprocessing step.
+ * Number of dataset for total dataset:
+ *      Non-Fraud Data: 284315
+ *      Fraud Data    :   492
  *
- * The data set is annotated with labels.
- * The features for each data point are saved in {train/test}_data_feature directory while
- * while the label is saved in {train/test}_data_label folder with the same file name.
+ * The dataset is further partitioned into training and testing dataset.
  *
- * Total Dataset:
- * Non-Fraud Data: 284 315
- * Fraud Data:     492
+ * Number of data points for training dataset:
+ *     Non-Fraud Data : 255 884 (File Index: [0.csv - 255883.csv])
  *
- * Training Data:
- *     Non-Fraud Data Size: 255 884 (File Index: 0 - 255883) (inclusive)
- * Testing Data:
- *     Non Fraud Data Size: 28431 (Index: 255 884 - 284314)
- *     Fraud Data Size: 492 (Index: 284315 - 284806)
+ * Number of data points for testing dataset:
+ *     Non Fraud Data : 28431 (File Name Index: [255884.csv - 284314.csv])
+ *     Fraud Data     : 492 (File Name Index: [284315.csv - 284806.csv0])
  *
  * Instructions:
- * 1. Download CreditCardFraud.zip file from this link
+ * 1. Download CreditCardFraud.zip file from this link https://drive.google.com/file/d/1ye6kjPQzt5VcQUuwLaPsxUqnAli2AoXe/view?usp=sharingv
+ * 2. In App.java, set File zipFilePath to your path to CreditCardFraud.zip
+ * 3. Run App.java
  *
  * @author ChiaWei Lim
  */

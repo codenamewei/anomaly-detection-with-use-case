@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53369e1-7b69-404b-8a66-f2781c6a2079" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/credit-card-fraud/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-fraud/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/CreditCardFraud/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/credit-card-fraud/src/main/java/com/codenamewei/CreditCardFraud/App.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +35,7 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562629845462" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/credit-card-fraud" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pipelines" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
