@@ -6,6 +6,7 @@
 
 ## Overview 
 This examples show Credit Card Transaction Fraud Detection.  
+
 The patterns of the non-fraud transactions are learned and captured in order to identify  
 the outliers which can be classified as high risk for transaction frauds.
 
@@ -13,11 +14,11 @@ This is accomplished in this example using a simple LSTM Autoencoder.
 Reconstruction error should be low for stereotypical example, whereas outliers should have high reconstruction error.
 
 While fraud detection normally modelled with unlabelled data,  
-the existence of dataset in this example further ease the process of validation
+the availability of labels in this example further ease the process of validation
 
 This example is model with a fairly large amount of data, closing to 300 thousand data points.   
-The data set is highly unbalanced with the ratio of 577 (normal) : 1 (fraud),    
-adding complexity to the data modelling.
+The data set is highly unbalanced with the ratio of 577 (normal) : 1 (fraud), adding complexity to the data modelling.  
+In another words, modelling with a model with softmax output layer would propagate bias.
 
 ## How to Run
  1. Download CreditCardFraud.zip file from this link https://drive.google.com/file/d/1ye6kjPQzt5VcQUuwLaPsxUqnAli2AoXe/view?usp=sharingv
@@ -34,17 +35,18 @@ credit-card-fraud
 │   
 │───src/main/java/com/codenamewei/CreditCardFraud/App.java    
 │
-│───PrePostProcessing   
-│└─────DataPreprocessing
-│     │   Credit-Card-Data-Cleaning_0.ipynb
-│     │   Credit-Card-Data_Splitting_1.ipynb
+│───src/main/java/com/codenamewei/python  
+│     └─────DataPreprocessing
+│           │   Credit-Card-Data-Cleaning_0.ipynb
+│           │   Credit-Card-Data_Splitting_1.ipynb
 │   
-└ ─────ResultPostProcessing
-      │   Credit-Card-Result-Visualization.ipynb
+└    └─────ResultPostProcessing
+            │   Credit-Card-Result-Visualization.ipynb
 ```
 
 **App.java:**
- 
+- The main file for modelling. 
+
 **Credit-Card-Data-Cleaning_0.ipynb:**  
 - Remove first row of the data(column names) and first column of the data(Time feature).
  
