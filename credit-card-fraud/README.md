@@ -57,14 +57,15 @@ credit-card-fraud
 **Credit-Card-Result-Visualization.ipynb:**
 - Visualize the results of the testing data and plot recall-precision curve.  
 
-## Data Sources
+## Originality of Data Sources
+
 Data is retrieved from https://www.kaggle.com/mlg-ulb/creditcardfraud.  
 It is of 2 days of transactions data from European cardholders in September 2013. 
 
 Yet this is not the data this example used in modelling directly.
 
 Preprocessing steps below are done to obtain the current CreditCardFraud.zip data for training and testing.    
-If you would just use the data processing, proceed to **Training and Testing Data** subsection. 
+Yet if you go for CreditCardFraud.zip directly, proceed to **Training and Testing Data** subsection. 
 
 (1) Drop the time column (For modelling with LSTM, time feature is not necessary)  
 (2) Drop the row with name of the columns (Time, V1, V2, V3 ...)  
