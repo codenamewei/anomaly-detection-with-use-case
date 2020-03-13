@@ -40,6 +40,7 @@
         <datavec.version>1.0.0-beta6</datavec.version>
         <arbiter.version>1.0.0-beta6</arbiter.version>
 
+        <httpclient.version>4.5.12</httpclient.version>
         <hadoop.version>2.2.0</hadoop.version>  <!-- Hadoop version used by Spark 1.6.3 and 2.2.1 (and likely others) -->
         <guava.version>19.0</guava.version>
         <logback.version>1.1.7</logback.version>
