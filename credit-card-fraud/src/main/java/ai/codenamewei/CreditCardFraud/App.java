@@ -85,7 +85,7 @@ public class App
     static final int FEATURE_NODES = 29;
     static final int HIDDEN_NODES = 16;
 
-    static final int MINI_BATCH_SIZE = 284;
+    static final int MINI_BATCH_SIZE = 64;
     static final int CLASSES = 2;
 
     static final double THRESHOLD = 2.5;

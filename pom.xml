@@ -38,7 +38,6 @@
         <nd4j.version>1.0.0-beta6</nd4j.version>
         <dl4j.version>1.0.0-beta6</dl4j.version>
         <datavec.version>1.0.0-beta6</datavec.version>
-        <arbiter.version>1.0.0-beta6</arbiter.version>
 
         <httpclient.version>4.5.12</httpclient.version>
         <hadoop.version>2.2.0</hadoop.version>  <!-- Hadoop version used by Spark 1.6.3 and 2.2.1 (and likely others) -->
