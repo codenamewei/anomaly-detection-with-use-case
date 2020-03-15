@@ -141,6 +141,7 @@ public class App
         // Train model.
         // It is worth to take note that the model is only trained with data of non-frauds to learn the general representation of non fraud data.
         System.out.println("Start Training");
+        Nd4j.getMemoryManager().setAutoGcWindow(5000);
 
         int nEpochs = 1;
 
